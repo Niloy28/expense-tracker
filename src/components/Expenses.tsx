@@ -2,10 +2,11 @@ import ExpenseItem from "./ExpenseItem";
 import { ExpensesProps } from "../types/ExpensesProps";
 
 import "../styles/Expenses.css";
+import Card from "./Card";
 
 function Expenses({ expenses }: ExpensesProps) {
 	return (
-		<div className="expenses-wrapper">
+		<Card className="expenses-wrapper">
 			{expenses.map((expense) => (
 				<ExpenseItem
 					key={expense.id}
@@ -15,7 +16,7 @@ function Expenses({ expenses }: ExpensesProps) {
 					date={expense.date}
 				/>
 			))}
-		</div>
+		</Card>
 	);
 }
 
