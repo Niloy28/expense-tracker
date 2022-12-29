@@ -1,8 +1,8 @@
 import ExpenseItem from "./ExpenseItem";
 import { ExpensesProps } from "../types/ExpensesProps";
+import Card from "./Card";
 
 import "../styles/Expenses.css";
-import Card from "./Card";
 
 const Expenses = ({ expenses }: ExpensesProps) => {
 	return (

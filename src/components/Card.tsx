@@ -1,4 +1,4 @@
-import React from "react";
+import CardProps from "../types/CardProps";
 
 import "../styles/Card.css";
 
@@ -7,10 +7,5 @@ const Card = ({ children, className }: CardProps) => {
 
 	return <div className={classes}>{children}</div>;
 };
-
-interface CardProps {
-	children: React.ReactNode;
-	className?: string;
-}
 
 export default Card;

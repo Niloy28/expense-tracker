@@ -1,5 +1,7 @@
-import "../styles/ExpenseDate.css";
+import ExpenseDateProps from "../types/ExpenseDateProps";
 import Card from "./Card";
+
+import "../styles/ExpenseDate.css";
 
 const ExpenseDate = ({ expenseDate }: ExpenseDateProps) => {
 	return (
@@ -13,10 +15,6 @@ const ExpenseDate = ({ expenseDate }: ExpenseDateProps) => {
 			<div className="expense-date__year">{expenseDate.getFullYear()}</div>
 		</Card>
 	);
-};
-
-type ExpenseDateProps = {
-	expenseDate: Date;
 };
 
 export default ExpenseDate;
