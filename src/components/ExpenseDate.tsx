@@ -1,8 +1,9 @@
 import "../styles/ExpenseDate.css";
+import Card from "./Card";
 
-function ExpenseDate({ expenseDate }: ExpenseDateProps) {
+const ExpenseDate = ({ expenseDate }: ExpenseDateProps) => {
 	return (
-		<div className="expense-date">
+		<Card className="expense-date">
 			<div className="expense-date__month">
 				{expenseDate.toLocaleString("en-US", { month: "long" })}
 			</div>
@@ -10,9 +11,9 @@ function ExpenseDate({ expenseDate }: ExpenseDateProps) {
 				{expenseDate.toLocaleString("en-US", { day: "2-digit" })}
 			</div>
 			<div className="expense-date__year">{expenseDate.getFullYear()}</div>
-		</div>
+		</Card>
 	);
-}
+};
 
 type ExpenseDateProps = {
 	expenseDate: Date;

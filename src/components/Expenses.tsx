@@ -4,7 +4,7 @@ import { ExpensesProps } from "../types/ExpensesProps";
 import "../styles/Expenses.css";
 import Card from "./Card";
 
-function Expenses({ expenses }: ExpensesProps) {
+const Expenses = ({ expenses }: ExpensesProps) => {
 	return (
 		<Card className="expenses-wrapper">
 			{expenses.map((expense) => (
@@ -18,6 +18,6 @@ function Expenses({ expenses }: ExpensesProps) {
 			))}
 		</Card>
 	);
-}
+};
 
 export default Expenses;
