@@ -1,0 +1,51 @@
+.expense-form {
+	background-color: #6c1188;
+	padding: 1rem;
+	border-radius: 12px;
+}
+
+.expense-form form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+	grid-row-start: auto;
+	align-items: center;
+	text-align: left;
+}
+
+.expense-form label {
+	font-weight: bolder;
+	color: white;
+}
+
+.expense-form input {
+	width: 70%;
+	height: 70px;
+	border-radius: 12px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.expense-form__submit {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.expense-form__submit button {
+	width: 60%;
+	height: 70px;
+	border-radius: 12px;
+	font-size: larger;
+	font-weight: bold;
+}
+
+.expense-form__submit button:hover {
+	background-color: grey;
+}
+
+.expense-form__submit button:active {
+	background-color: black;
+	color: white;
+}

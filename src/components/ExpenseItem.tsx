@@ -1,16 +1,17 @@
 import ExpenseDate from "./ExpenseDate";
 
 import "../styles/ExpenseItem.css";
-import { Expense } from "../types/ExpensesProps";
+import Expense from "../types/ExpensesProps";
 import Card from "./Card";
 
-const ExpenseItem = ({ title, amount, date }: Expense) => {
+const ExpenseItem: React.FC<Expense> = (props) => {
 	return (
 		<Card className="expense-item">
-			<ExpenseDate expenseDate={date} />
+			<ExpenseDate expenseDate={props.date} />
 			<div className="expense-item__description">
-				<h2>{title}</h2>
-				<div className="expense-item__price">${amount}</div>
+				<h2>{props.title}</h2>
+				<div>{}</div>
+				<div className="expense-item__price">${props.amount}</div>
 			</div>
 		</Card>
 	);
