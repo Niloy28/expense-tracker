@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 import "../styles/ExpenseForm.css";
 import Card from "./Card";
+import Expense from "../types/ExpensesProps";
 
-const ExpenseForm = () => {
+const ExpenseForm: React.FC<{ onFormSubmit: (expense: Expense) => void }> = (
+	props
+) => {
 	const [enteredTitle, setEnteredTitle] = useState("");
 	const [enteredAmount, setEnteredAmount] = useState("");
 	const [enteredDate, setEnteredDate] = useState("");
@@ -30,12 +34,13 @@ const ExpenseForm = () => {
 		event.preventDefault();
 
 		const expenseData = {
+			id: uuidv4(),
 			title: enteredTitle,
-			amount: enteredAmount,
+			amount: parseFloat(enteredAmount),
 			date: new Date(enteredDate),
-		};
+		} as Expense;
 
-		console.log(expenseData);
+		props.onFormSubmit(expenseData);
 		resetAllInputs();
 	};
 
