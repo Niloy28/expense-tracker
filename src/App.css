@@ -1,9 +1,13 @@
+body {
+	margin: 0;
+}
+
 .App {
 	text-align: center;
 	display: flex;
+	margin: 0 auto;
 	flex-direction: column;
-	width: auto;
-	flex: 1;
+	width: 70%;
 	justify-content: center;
 	align-items: center;
 }

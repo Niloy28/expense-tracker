@@ -1,8 +1,9 @@
 .expenses-wrapper {
 	display: flex;
+	box-sizing: border-box;
 	background-color: rgb(41, 41, 41);
 	flex-direction: column;
 	justify-content: center;
-	width: 60%;
+	width: 100%;
 	flex: 0.5 1;
 }
