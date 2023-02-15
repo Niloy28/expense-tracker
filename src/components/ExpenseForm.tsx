@@ -13,15 +13,23 @@ const ExpenseForm: React.FC<{ onFormSubmit: (expense: Expense) => void }> = (
 	const [enteredDate, setEnteredDate] = useState("");
 
 	const titleChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setEnteredTitle(event.currentTarget.value);
+		setEnteredTitle(event.currentTarget.value.trim());
 	};
 
 	const amountChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setEnteredAmount(event.currentTarget.value);
+		setEnteredAmount(event.currentTarget.value.trim());
 	};
 
 	const dateChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setEnteredDate(event.currentTarget.value);
+		setEnteredDate(event.currentTarget.value.trim());
+	};
+
+	const hasEmptyInputs = () => {
+		return (
+			enteredTitle.length === 0 ||
+			enteredAmount.length === 0 ||
+			enteredDate.length === 0
+		);
 	};
 
 	const resetAllInputs = () => {
@@ -33,15 +41,19 @@ const ExpenseForm: React.FC<{ onFormSubmit: (expense: Expense) => void }> = (
 	const formSubmitHandler = (event: React.FormEvent) => {
 		event.preventDefault();
 
-		const expenseData = {
-			id: uuidv4(),
-			title: enteredTitle,
-			amount: parseFloat(enteredAmount),
-			date: new Date(enteredDate),
-		} as Expense;
+		if (!hasEmptyInputs()) {
+			const expenseData = {
+				id: uuidv4(),
+				title: enteredTitle,
+				amount: parseFloat(enteredAmount),
+				date: new Date(enteredDate),
+			} as Expense;
 
-		props.onFormSubmit(expenseData);
-		resetAllInputs();
+			props.onFormSubmit(expenseData);
+			resetAllInputs();
+		} else {
+			alert("Input fields cannot be empty!");
+		}
 	};
 
 	return (
