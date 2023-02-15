@@ -1,9 +1,9 @@
-import ExpenseItem from "./ExpenseItem";
-import Expense from "../types/ExpensesProps";
 import Card from "./Card";
+import ExpenseItem from "./ExpenseItem";
+import ExpenseFilter from "./ExpenseFilter";
+import Expense from "../types/ExpensesProps";
 
 import "../styles/Expenses.css";
-import ExpenseFilter from "./ExpenseFilter";
 
 const Expenses: React.FC<{ expenses: Expense[] }> = (props) => {
 	return (

@@ -1,6 +1,6 @@
 import "../styles/ExpenseFilter.css";
 
-const ExpenseFilter = () => {
+const ExpenseFilter: React.FC = () => {
 	return (
 		<div className="expense-filter">
 			<div>Filter By Year</div>

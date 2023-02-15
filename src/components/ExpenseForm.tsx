@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-import "../styles/ExpenseForm.css";
 import Card from "./Card";
 import Expense from "../types/ExpensesProps";
+
+import "../styles/ExpenseForm.css";
 
 const ExpenseForm: React.FC<{ onFormSubmit: (expense: Expense) => void }> = (
 	props

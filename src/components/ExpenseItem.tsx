@@ -1,8 +1,8 @@
+import Card from "./Card";
 import ExpenseDate from "./ExpenseDate";
+import Expense from "../types/ExpensesProps";
 
 import "../styles/ExpenseItem.css";
-import Expense from "../types/ExpensesProps";
-import Card from "./Card";
 
 const ExpenseItem: React.FC<Expense> = (props) => {
 	return (
