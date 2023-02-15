@@ -1,7 +1,7 @@
 .expense-form {
 	box-sizing: border-box;
 	background-color: #6c1188;
-	padding: 1rem;
+	padding: 0.5rem;
 	border-radius: 12px;
 }
 
@@ -12,26 +12,34 @@
 	grid-auto-rows: minmax(100px, auto);
 	grid-row-start: auto;
 	align-items: center;
-	text-align: left;
+}
+
+.expense-form form div {
+	margin-left: 3rem;
+	margin-right: 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
 }
 
 .expense-form label {
+	text-align: start;
 	font-weight: bolder;
 	color: white;
 }
 
 .expense-form input {
-	width: 70%;
-	height: 70px;
-	border-radius: 12px;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	width: 100%;
+	font-size: large;
+	height: 2.5rem;
+	border-radius: 4px;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
 }
 
 .expense-form__submit {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	width: 30%;
+	margin-left: auto;
 }
 
 .expense-form__submit button {

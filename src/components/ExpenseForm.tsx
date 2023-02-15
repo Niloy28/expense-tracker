@@ -46,8 +46,8 @@ const ExpenseForm: React.FC<{ onFormSubmit: (expense: Expense) => void }> = (
 
 	return (
 		<Card className="expense-form">
-			<form onSubmit={formSubmitHandler}>
-				<div className="expense-form__title">
+			<form id="expense-form" onSubmit={formSubmitHandler}>
+				<div>
 					<label htmlFor="expense-text">Title: </label>
 					<input
 						type="text"
@@ -79,10 +79,12 @@ const ExpenseForm: React.FC<{ onFormSubmit: (expense: Expense) => void }> = (
 						onChange={dateChangeHandler}
 					/>
 				</div>
-				<div className="expense-form__submit">
-					<button type="submit">Add</button>
-				</div>
 			</form>
+			<div className="expense-form__submit">
+				<button form="expense-form" type="submit">
+					Add Expense
+				</button>
+			</div>
 		</Card>
 	);
 };
