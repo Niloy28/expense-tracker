@@ -33,13 +33,13 @@ const DUMMY_EXPENSES = [
 ];
 
 const App = () => {
+	const [expenses, setExpenses] = useState<Expense[]>(DUMMY_EXPENSES);
+
 	const addExpenseHandler = (newExpense: Expense) => {
 		setExpenses((prevExpenses) => {
 			return [newExpense, ...prevExpenses];
 		});
 	};
-
-	const [expenses, setExpenses] = useState<Expense[]>(DUMMY_EXPENSES);
 
 	return (
 		<div className="App">
