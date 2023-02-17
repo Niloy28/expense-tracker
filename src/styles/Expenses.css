@@ -7,3 +7,9 @@
 	width: 100%;
 	flex: 0.5 1;
 }
+
+.no-expense {
+	color: white;
+	font-size: large;
+	font-weight: bold;
+}
