@@ -14,15 +14,15 @@ const ExpenseForm: React.FC<{ onFormSubmit: (expense: Expense) => void }> = (
 	const [enteredDate, setEnteredDate] = useState("");
 
 	const titleChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setEnteredTitle(event.currentTarget.value.trim());
+		setEnteredTitle(event.currentTarget.value);
 	};
 
 	const amountChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setEnteredAmount(event.currentTarget.value.trim());
+		setEnteredAmount(event.currentTarget.value);
 	};
 
 	const dateChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setEnteredDate(event.currentTarget.value.trim());
+		setEnteredDate(event.currentTarget.value);
 	};
 
 	const hasEmptyInputs = () => {
@@ -45,9 +45,9 @@ const ExpenseForm: React.FC<{ onFormSubmit: (expense: Expense) => void }> = (
 		if (!hasEmptyInputs()) {
 			const expenseData = {
 				id: uuidv4(),
-				title: enteredTitle,
-				amount: parseFloat(enteredAmount),
-				date: new Date(enteredDate),
+				title: enteredTitle.trim(),
+				amount: parseFloat(enteredAmount.trim()),
+				date: new Date(enteredDate.trim()),
 			} as Expense;
 
 			props.onFormSubmit(expenseData);
@@ -86,8 +86,8 @@ const ExpenseForm: React.FC<{ onFormSubmit: (expense: Expense) => void }> = (
 					<input
 						type="date"
 						id="expense-date"
-						min="2022-01-01"
-						max="2023-12-31"
+						min="2020-01-01"
+						max="2024-12-31"
 						value={enteredDate}
 						onChange={dateChangeHandler}
 					/>
