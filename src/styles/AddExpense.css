@@ -1,0 +1,23 @@
+.add-expense {
+	box-sizing: border-box;
+	background-color: #6c1188;
+	border-radius: 12px;
+	padding: 3rem;
+}
+
+.add-expense button {
+	width: 60%;
+	height: 70px;
+	border-radius: 12px;
+	font-size: larger;
+	font-weight: bold;
+}
+
+.add-expense button:hover {
+	background-color: grey;
+}
+
+.add-expense button:active {
+	background-color: black;
+	color: white;
+}

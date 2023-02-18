@@ -6,9 +6,10 @@ import Expense from "../types/ExpensesProps";
 
 import "../styles/ExpenseForm.css";
 
-const ExpenseForm: React.FC<{ onFormSubmit: (expense: Expense) => void }> = (
-	props
-) => {
+const ExpenseForm: React.FC<{
+	onFormSubmit: (expense: Expense) => void;
+	onCancelAddExpense: () => void;
+}> = (props) => {
 	const [enteredTitle, setEnteredTitle] = useState("");
 	const [enteredAmount, setEnteredAmount] = useState("");
 	const [enteredDate, setEnteredDate] = useState("");
@@ -97,6 +98,7 @@ const ExpenseForm: React.FC<{ onFormSubmit: (expense: Expense) => void }> = (
 				<button form="expense-form" type="submit">
 					Add Expense
 				</button>
+				<button onClick={props.onCancelAddExpense}>Cancel</button>
 			</div>
 		</Card>
 	);

@@ -38,6 +38,8 @@
 }
 
 .expense-form__submit {
+	display: flex;
+	flex-direction: row-reverse;
 	width: 30%;
 	margin-left: auto;
 }
