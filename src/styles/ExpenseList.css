@@ -1,0 +1,10 @@
+.expense-list {
+	list-style: none;
+	padding: 0;
+}
+
+.no-expense {
+	color: white;
+	font-size: large;
+	font-weight: bold;
+}

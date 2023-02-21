@@ -1,0 +1,9 @@
+.chart {
+	padding: 1rem;
+	background-color: rgb(234, 154, 236);
+	border-radius: 12px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 10rem;
+}
